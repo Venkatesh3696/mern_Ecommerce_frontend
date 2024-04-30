@@ -1,13 +1,15 @@
 import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
+import { Toaster } from "react-hot-toast";
 
 const Layout = (props) => {
   return (
-    <div className="text-center">
+    <div className="layout-container">
       <Header />
-      <main style={{ height: "70vh" }}>{props.children}</main>
+      <main style={{ minHeight: "70vh" }}>{props.children}</main>
       <Footer />
+      <Toaster />
     </div>
   );
 };
