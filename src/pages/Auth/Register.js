@@ -11,6 +11,7 @@ const Register = () => {
   const [password, setPassword] = useState("");
   const [phone, setPhone] = useState("");
   const [address, setAddress] = useState("");
+  const [answer, setAnswer] = useState("");
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -23,6 +24,7 @@ const Register = () => {
         password,
         phone,
         address,
+        answer,
       });
       if (res && res.data.success) {
         toast.success(res.data && res.data.message);
@@ -67,7 +69,7 @@ const Register = () => {
               value={password}
               type="password"
               className="form-control"
-              placeholder="Enter Your Password"
+              placeholder="Enter Password"
               required
               autoComplete="true"
             />
@@ -89,6 +91,16 @@ const Register = () => {
               type="text"
               className="form-control"
               placeholder="Enter Your Address"
+              required
+            />
+          </div>
+          <div className="mb-3">
+            <input
+              onChange={(e) => setAnswer(e.target.value)}
+              value={answer}
+              type="text"
+              className="form-control"
+              placeholder="What is your best friend name"
               required
             />
           </div>

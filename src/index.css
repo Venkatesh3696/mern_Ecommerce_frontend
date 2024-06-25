@@ -49,7 +49,7 @@ code {
   border-bottom: 1px solid #ffefba;
 }
 
-/* pagennot found */
+/* page not found */
 
 .pnf {
   display: flex;
@@ -81,4 +81,10 @@ code {
   color: #ffffff;
   background-color: #000000;
   border: 1px solid #000000;
+}
+
+/* // product.js */
+.product-link {
+  text-decoration: none;
+  color: #000000;
 }
